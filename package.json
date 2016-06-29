@@ -1,0 +1,19 @@
+{
+  "name": "find-files-excluding-dirs",
+  "version": "0.0.1",
+  "description": "Searches for files, does not fall into exluded directories",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexsaveliev/find-files-excluding-dirs.git"
+  },
+  "author": "Alex Saveliev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexsaveliev/find-files-excluding-dirs/issues"
+  },
+  "homepage": "https://github.com/alexsaveliev/find-files-excluding-dirs#readme"
+}

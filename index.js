@@ -24,6 +24,13 @@ var path = require("path").posix;
  */
 module.exports = function(directory, options) {
     var files = [];
+	try {
+		if (!fs.statSync(directory).isDirectory()) {
+			return files;
+		}
+	} catch (e) {
+		return files;
+	}
     collect(directory, options || {}, files);
     files.sort();
     return files;

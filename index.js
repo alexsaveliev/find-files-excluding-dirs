@@ -25,6 +25,7 @@ var path = require("path").posix;
 module.exports = function(directory, options) {
     var files = [];
     collect(directory, options || {}, files);
+    files.sort();
     return files;
 };
 

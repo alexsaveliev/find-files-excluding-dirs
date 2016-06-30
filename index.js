@@ -52,7 +52,15 @@ function collect(directory, options, files) {
             }
         }
         var p = path.join(directory, file);
-        if (fs.statSync(p).isDirectory()) {
+        var isDirectory;
+        try {
+        	isDirectory = fs.statSync(p).isDirectory();
+        } catch (e) {
+        	// permissions, links in Docker mode
+        	return;
+        }
+
+        if (isDirectory) {
             collect(p, options, files);
         } else {
             if (options.matcher && !options.matcher(directory, file)) {
